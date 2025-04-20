@@ -57,7 +57,7 @@ app.post('/books', async (req ,res) => {
     try {
         const result = await newBookModel.save();
         console.info(result);
-        res.status(200).send(result);
+        res.status(200).json(result);
     }catch (err) {
         console.error(err.message);
         res.status(500).send('Server error');
@@ -69,14 +69,52 @@ app.post('/books_v2', async (req ,res) => {
     try {
         const result = await BookModel.create(req.body);
         console.info(result);
-        res.status(200).send(result); 
+        res.status(200).json(result); 
     }catch (err) {
         console.error(err.message);
         res.status(500).send('Server error');
     }
 })
 
+//Route put to update book document by id
+app.put('/books/:id', async (req , res) => {
+    try {
+        const result =  await BookModel.findOneAndUpdate(
+            {
+                _id:req.params.id
+            },
+            {
+                $set:
+                {
+                    title:req.body.title,
+                    author:req.body.author,
+                    category:req.body.category
+                }
+            },
+            {
+                upsert:true
+            }
+        )
 
+        console.info(result);
+        res.status(204).json(result);
+    }catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server error');
+    }
+})
+
+//Route delete to delete book document by id
+app.delete('/books/:id', async (req , res) => {
+    try {
+        const result = await BookModel.findOneAndDelete({_id:req.params.id});
+        console.info(result);
+        res.status(204).send(`Book with _id:${req.params.id} deleted succesfully.`);
+    }catch (err) {
+        console.error(err.message);
+        res.status(500).send('server error');
+    }
+})
 app.listen(port, () => {
     console.info(`Server is running on port ${port}`);
 })
