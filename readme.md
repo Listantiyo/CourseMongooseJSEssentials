@@ -49,4 +49,32 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/CourseMongooseJSEssentials.git
+   git clone https://github.com/Listantiyo/CourseMongooseJSEssentials.git
+2. Navigate to the project directory:
+  ```bash
+   cd CourseMongooseJSEssentials
+3. Install the dependencies:
+  ```bash
+   npm install
+4. Start the application:
+  ```bash
+   npm start
+
+## Usage
+
+- Open your browser and navigate to http://localhost:8080 (atau port yang Anda gunakan) untuk melihat aplikasi berjalan.
+
+## License
+
+- This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+### Penjelasan Struktur README.md
+
+- **Judul dan Deskripsi**: Menyediakan informasi dasar tentang proyek.
+- **Teknologi dan Library**: Menyebutkan teknologi dan library yang digunakan dalam proyek.
+- **Repository GitHub**: Menyediakan tautan ke repositori GitHub.
+- **To-Do**: Menyediakan daftar tugas yang perlu diselesaikan dalam proyek.
+- **Instalasi**: Menjelaskan langkah-langkah untuk mengkloning dan menjalankan proyek.
+- **Penggunaan**: Memberikan informasi tentang cara menggunakan aplikasi setelah dijalankan.
+- **Lisensi**: Menyebutkan lisensi proyek.
