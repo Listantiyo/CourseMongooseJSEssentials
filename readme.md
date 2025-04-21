@@ -1,7 +1,7 @@
 # CourseMongooseJSEssentials
 
 ## Description
-( DONE ) Learn how to create Mongoose Schemas to build a full CRUD application based on the MongoDB database design.
+Learn how to create Mongoose Schemas to build a full CRUD application based on the MongoDB database design.
 
 ## Technology
 - **Node.js**
