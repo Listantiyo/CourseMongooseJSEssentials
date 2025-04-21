@@ -51,13 +51,13 @@
    ```bash
    git clone https://github.com/Listantiyo/CourseMongooseJSEssentials.git
 2. Navigate to the project directory:
-  ```bash
+   ```bash
    cd CourseMongooseJSEssentials
 3. Install the dependencies:
-  ```bash
+   ```bash
    npm install
 4. Start the application:
-  ```bash
+   ```bash
    npm start
 
 ## Usage
